@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	color: #FFF;
+    background: linear-gradient(to bottom, #34474e 0%, #23538a 100%)
+}
+
+header {
+	padding: 1.5rem 1rem;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+header h1{ 
+	font-size: 2.75rem;
+	font-weight: 300;
+	color: beige;
+	margin-bottom: 1rem;
+}
+
+#new-note-form {
+	display: flex;;
+}
+
+input, button {
+	appearance: none;
+	border: none;
+	outline: none;
+	background: none;
+}
+
+#new-note-input {
+	flex: 1 1 0%;
+	background-color:#1F2937;
+	border-radius: 1rem;
+	margin-right: 1rem;
+	color: #eee;
+	font-size: 1.25rem;
+}
+
+#new-note-input::placeholder {
+	color: #6B7280;
+}
+
+#new-note-submit {
+	color: plum;
+	font-size: 1.25rem;
+	font-weight: 700;
+	background-image: linear-gradient(to right, plum,rgb(223, 92, 223) );
+    background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+#new-note-submit:hover {
+	opacity: 0.8;
+}
+
+#new-note-submit:active {
+	opacity: 0.4;
+}
+
+main {
+	flex: 1 1 0%;
+	max-width: 800px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.note-list {
+	padding: 1rem;
+}
+
+.note-list h2 {
+	font-size: 1.75rem;
+	font-weight: 300;
+	color: beige;
+	margin-bottom: 1rem;
+}
+
+#notes .note {
+	display: none;
+	justify-content: space-between;
+	background-color: #111827;
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-bottom: 1rem;
+}
+#notes .note.active{
+    display: flex;
+}
+
+.note .content {
+	flex: 1 1 0%;
+}
+
+.note .content .text {
+	color: #eee;
+	font-size: 1.125rem;
+	width: 100%;
+	display: block;
+	transition: 0.3s;
+}
+
+.note .content .text:not(:read-only) {
+	color: plum;
+}
+
+.note .actions {
+	display: flex;
+	margin: 0 -0.5rem;
+}
+
+.note .actions button {
+	cursor: pointer;
+	margin: 0 0.5rem;
+	font-size: 1.125rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	transition: 0.3s;
+}
+
+.note .actions button:hover {
+	opacity: 0.8;
+}
+
+.note .actions button:active {
+	opacity: 0.4;
+}
+
+.note .actions .edit {
+	background-image: linear-gradient(to right, plum,rgb(223, 92, 223) );
+    background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.note .actions .delete {
+	color: crimson;
+}
